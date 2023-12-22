@@ -1,3 +1,8 @@
-:host {
-  display: block;
+::ng-deep .red {
+  color: var(--red-600);
+}
+
+.menu_bar {
+  display: flex;
+  flex-direction: row-reverse;
 }

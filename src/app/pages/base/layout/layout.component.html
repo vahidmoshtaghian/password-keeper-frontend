@@ -1,2 +1,5 @@
-<p>layout works!</p>,
+<p-menu #menu [model]="items" [popup]="true"></p-menu>
+<div class="menu_bar">
+    <p-button [outlined]="true" (click)="menu.toggle($event)" icon="pi pi-bars"></p-button>
+</div>
 <router-outlet></router-outlet>
