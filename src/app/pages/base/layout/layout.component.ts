@@ -36,7 +36,8 @@ export class LayoutComponent implements OnInit {
         label: '<span style="color: var(--red-600)">Log Out</span>',
         escape: false,
         icon: "pi pi-sign-out",
-        iconClass: "red"
+        iconClass: "red",
+        routerLink: '/account/sign-in'
       },
     ]
   }

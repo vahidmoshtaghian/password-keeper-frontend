@@ -3,6 +3,7 @@ import { OrganizationsListComponent } from './pages/organizations-list/organizat
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { LayoutComponent } from './pages/base/layout/layout.component';
+import { IdentityLayoutComponent } from './pages/base/identity-layout/identity-layout.component';
 
 export const routes: Routes = [
     {
@@ -22,11 +23,17 @@ export const routes: Routes = [
         ]
     },
     {
-        path: "sign-up",
-        component: SignUpComponent
-    },
-    {
-        path: "sign-in",
-        component: SignInComponent
-    },
+        path: "account",
+        component: IdentityLayoutComponent,
+        children: [
+            {
+                path: "sign-up",
+                component: SignUpComponent
+            },
+            {
+                path: "sign-in",
+                component: SignInComponent
+            },
+        ]
+    }
 ];

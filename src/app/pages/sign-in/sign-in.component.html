@@ -1,1 +1,11 @@
-<h1>sing in</h1>
+<form *ngIf="formGroup" [formGroup]="formGroup">
+    <div class="flex flex-column gap-2">
+        <label for="username">Username</label>
+        <input id="username" type="text" pInputText formControlName="username" />
+    </div>
+    <div class="flex flex-column gap-2">
+        <label for="password">Password</label>
+        <input id="password" type="password" pInputText formControlName="password" />
+    </div>
+
+</form>
